@@ -1,7 +1,7 @@
 #!/bin/bash 
 svn_bak=/data/backup/svnbackup
 svn_dir=/data/svndata/test 
-date=$(date +%Y%m%d)
+date=`date +%Y-%m-%d_%H:%M:%S`
 echo "0" >/tmp/svnid 
 id1=$(cat /tmp/svnid)
 id2=$(svnlook youngest $svn_dir)

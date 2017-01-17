@@ -22,7 +22,7 @@ dir=/data/backup/mysqlbackup
 user=root 
 pass=root
 RETVAL=0 
-date=$(date +%Y-%m-%d%H)
+date=`date +%Y-%m-%d_%H:%M:%S`
 cd $dir 
 docker exec -it  0086355458f0 mysqldump -uroot -proot --default-character-set=utf8 gitlab > /data/backup/mysqlbackup/gitlab_$date.sql
 RETVAL=$?
